@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+<title>Golden Proyect</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- include header  -->
+        <%- include('./partials/header.ejs') %>
+    <main>
+        <section class="main-banner">
+            <div class="imagen-banner">
+                <!-- <img src="/img/hombre-elegante.jpg" alt="Imagen" id="hombre-elegante"> -->
+                
+                <h2 id="accesorios-hombres-title">Accesorios<br/>para hombres</h2>
+                <p>Casual y formal</p>
+                <button>Colecciones</button>
+            </div>    
+        </section>
+        <section class="description-banner">
+            <h2>Accesorios masculinos de buena calidad y accesibles</h2>
+            <p>Los mejores accesorios de la Argentina, para que puedas vestirte como te sentis</p>
+            <p>Date el estilo que mereces</p>
+            <div class="description-banner-icons">
+                <div class="delivery-icon">
+                    <i class="fa-solid fa-truck"></i>
+                    <p>Envio gratis en todo el pais</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p>Todos los medios de pago</p>
+                </div>
+                <div class="money-icon">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <p>Garantia de reembolso</p>
+                </div>
+            </div>
+        </section>
+        <section class="categories-section">
+            <article id="relojes">
+                <h3>Relojes</h3>
+            </article>
+            <article id="pulseras">
+                <h3>Pulseras</h3>
+            </article>
+            <article id="anillos">
+                <h3>Anillos</h3>
+            </article>
+            <article id="cinturones">
+                <h3>Cinturones</h3>
+            </article>
+            <article id="collares">
+                <h3>Collares</h3>
+            </article>
+            <article id="corbatas">
+                <h3>Corbatas</h3>
+            </article>
+        </section>
+        <section class="VIP-list">
+            <h2 id="unite-al-VIP">Unite a la lista VIP</h2>
+            <p>y enterate antes que nadie de nuestros nuevos lanzamientos.</p>
+            <p>Además accedes a articulos exclusivos por encargue y a promociones.</p>
+                <form action="/">
+                    <input type="email" placeholder="Dejanos tu email">
+                    <input type="submit" value="Enviar">
+                </form>
+            </h2>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+    </div>
+</body>
+</html>

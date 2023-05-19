@@ -1,0 +1,132 @@
+<%- include('./partials/head.ejs') %>
+<title>Producto</title>
+</head>
+
+<body>
+    
+<div class="page-container">
+
+    <%- include('./partials/header.ejs') %>
+
+<div>
+    <nav class="breadcrumbs-list">
+        <ul>
+            <li>HOME></li>
+            <li>CATEGORIA></li>
+            <li>SUBCATEGORIA</li>
+        </ul>
+        <p id="product-name-nav">Nombre del producto</p>
+    </nav>
+</div>
+<article class="producto">
+    <div class="imagen-producto">
+        <img src="./img/ring.jpeg" alt="imagen-producto">
+    </div>
+    <div class="descripcion-producto">
+        <h2>Nombre del producto</h2>
+        <h3>AR$ ####</h3>
+        <div class="product-options">
+            <form action="">
+                <fieldset class="single-option-radio">
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">Chico</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">Mediano</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">Grande</label>
+                </fieldset>
+                <div>
+                    <input type="checkbox" id="with-box">
+                    <label for="with-box">Agregar estuche</label>
+                </div>
+                <div class="button-buynow">
+                    <button type="submit">Comprar ahora</button>
+                </div>
+                <div class="button-addtocart">
+                    <button type="submit">Agregar al carrito</button>
+                </div>
+            </form>
+            <div class="share-social">
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="description-banner-icons">
+                <div class="delivery-icon">
+                    <i class="fa-solid fa-truck"></i>
+                    <p>Envio gratis a todo el pais</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p>Todos los medios de pago</p>
+                </div>
+                <div class="money-icon">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <p>Garantia de reembolso</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3>Descripcion del producto</h3>
+            <p>Iorem ipsum segegea peribum
+                sdfeigieiag giaeg asdgiegi
+                agieaoei ioeaogieao gi 
+                gieoagi giegiao ndjaejg
+            </p>
+            <ul>
+                <li><strong>Dimensiones:</strong> Alguna dimension</li>
+                <li><strong>Material:</strong> Algun material</li>
+                <li><strong>Metal:</strong> Algun metal</li>
+                <li><strong>Peso:</strong> Algun peso</li>
+            </ul>
+        </div>
+    </div>
+</article>
+<section>
+    <div class="related-products">
+        <h2>Productos relacionados</h2>
+        <article>
+            <div class="related-product-image">
+                <img src="./img/ring.jpeg" alt="imagen-producto">
+            </div>
+            <p>Nombre producto</p>
+            <p>$ ###</p>
+        </article>
+        <article>
+            <div class="related-product-image">
+                <img src="./img/ring.jpeg" alt="imagen-producto">
+            </div>
+            <p>Nombre producto</p>
+            <p>$ ###</p>
+        </article>
+        <article>
+            <div class="related-product-image">
+                <img src="./img/ring.jpeg" alt="imagen-producto">
+            </div>
+            <p>Nombre producto</p>
+            <p>$ ###</p>
+        </article>
+        <article>
+            <div class="related-product-image">
+                <img src="./img/ring.jpeg" alt="imagen-producto">
+            </div>
+            <p>Nombre producto</p>
+            <p>$ ###</p>
+        </article>
+    </div>
+</section>
+<section>
+   
+</section>
+
+<%- include('./partials/footer.ejs') %>
+
+</div>
+<script src="../js/main.js"></script>
+</body>

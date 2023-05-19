@@ -1,0 +1,478 @@
+/* 
+Paleta de colores:
+Dark golden > #8E793E
+Light golden > #AD974F
+Dark grey > #231F20
+Lighy grey > #EAEAEA
+Ivory > #FFFAE5
+Khaki > #E0D7C7
+Cream > #FAF7F4 
+Southern Comfort
+Storm: #222c3c | Jean: #999ea7 | Honey: #d8b26e | Nude: #b69b7d | Cream: #e2e0d5
+*/
+:root {
+  /* --light-golden:#AD974F;
+  --dark-golden: #8E793E;
+  --dark-grey: #231F20;
+  --lighy-grey: #EAEAEA;
+  --ivory: #FFFAE5;
+  --khaki: #E0D7C7;
+  --cream: #FAF7F4; */
+  /* Southern Comfort*/
+  --Storm: #222c3c;
+  --Jean: #999ea7;
+  --Honey: #d8b26e;
+  --Nude: #b69b7d;
+  --Cream: #e2e0d5;
+}
+
+* {
+  /* font-family: 'Kurale', serif; */
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100;
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+p {
+  font-size: 17px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding-top: 5px;
+}
+header .container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container h2 {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}
+header .container h2 span {
+  font-weight: 600;
+}
+header .container nav {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(4, auto);
+}
+@media (max-width: 767px) {
+  header .container nav {
+    display: none;
+  }
+}
+header .container nav a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+}
+header.is-scrolling {
+  background-color: var(--Cream);
+}
+header.is-scrolling .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+main {
+  padding-top: 68px;
+}
+
+.index-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  z-index: 99;
+}
+
+.index-banner navbar {
+  width: 20%;
+}
+
+.brand-title {
+  width: 60%;
+  text-align: center;
+}
+
+.brand-title h2 {
+  font-family: "Kurale", serif;
+  margin: 0px;
+}
+
+.carrito {
+  width: 20%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.carrito p {
+  font-size: 1em;
+  margin: 0px;
+  padding-bottom: 3px;
+}
+
+/* HAMBURGER RESPONSIVE */
+.hamburger-container {
+  width: 20%;
+  padding-top: 1px;
+}
+
+.hamburger {
+  margin: auto;
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  margin: 4px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-9px, 4px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-7px, -3px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: var(--Cream);
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: var(--Honey);
+  color: black;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #e6ac48;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+/* INDEX */
+.imagen-banner {
+  background-image: url("/img/buttoning-watch-man.jpeg");
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+}
+
+#accesorios-hombres-title {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.index-banner {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.user-profile {
+  display: flex;
+}
+
+.user-profile ul {
+  list-style-type: none;
+}
+
+.description-banner {
+  text-align: center;
+  height: 400px;
+  background-color: #EAEAEA;
+}
+
+.description-banner h2 {
+  margin-top: 0px;
+  padding-top: 30px;
+  margin-bottom: 35px;
+}
+
+.description-banner p {
+  margin: 20px 0px;
+}
+
+.description-banner-icons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.description-banner-icons div {
+  width: 30%;
+}
+
+.categories-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.categories-section h3 {
+  font-size: 1.5em;
+  margin: auto;
+  margin-top: 18vw;
+}
+
+.categories-section article {
+  box-sizing: border-box;
+  height: 50vw;
+  width: 50%;
+  background-image: url("/img/default-image.png");
+  background-size: cover;
+  background-position: center;
+  border: 5px #EAEAEA solid;
+  color: #FAF7F4;
+}
+
+#relojes, #corbatas {
+  width: 100%;
+}
+
+#relojes {
+  background-image: url("/img/watch.jpeg");
+}
+
+#pulseras {
+  background-image: url("/img/wristband-black.jpeg");
+}
+
+#anillos {
+  background-image: url("/img/ring.jpeg");
+}
+
+#cinturones {
+  background-image: url("/img/belt.jpeg");
+}
+
+#collares {
+  background-image: url("/img/necklace.jpeg");
+}
+
+#corbatas {
+  background-image: url("/img/tie.jpeg");
+}
+
+.VIP-list {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.VIP-list p {
+  margin-top: 0px;
+}
+
+#unite-al-VIP {
+  margin-bottom: 0px;
+}
+
+/* Comienza la seccion de detalle de producto */
+.breadcrumbs-list ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.breadcrumbs-list {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--Storm);
+  color: white;
+}
+
+#product-name-nav {
+  margin: 2px;
+  margin-left: 15px;
+}
+
+.producto {
+  padding-top: 15px;
+  width: 100%;
+  border-bottom: 2px var(--Honey) solid;
+  background-color: var(--Storm);
+  color: white;
+  font-weight: 100;
+}
+
+.imagen-producto {
+  display: flex;
+  justify-content: center;
+}
+
+.descripcion-producto {
+  text-align: center;
+}
+
+.share-social {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--Honey);
+}
+
+.product-description {
+  width: 90%;
+  margin: auto;
+}
+
+.product-description p, ul {
+  text-align: left;
+}
+
+.related-products {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.related-products h2 {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.related-products article {
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+}
+
+.related-products p {
+  margin: 2px;
+}
+
+.related-products-image {
+  width: 90%;
+}
+
+.related-product-image img {
+  object-fit: none;
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: none;
+  padding: 0px;
+  text-align: center;
+}
+
+footer .li-title {
+  font-weight: 700;
+}
+
+.half-width-border {
+  margin: auto;
+  width: 50%;
+  border-top: 2px solid var(--Honey);
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    display: none;
+    width: 0%;
+  }
+}/*# sourceMappingURL=mainStyle.css.map */

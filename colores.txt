@@ -1,0 +1,55 @@
+black n gold
+
+    --primary-100:#FFD700;
+    --primary-200:#ddb900;
+    --primary-300:#917800;
+    --accent-100:#C0C0C0;
+    --accent-200:#626262;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#000000;
+    --bg-200:#161616;
+    --bg-300:#2c2c2c;
+      
+
+gold n ivory
+
+    --primary-100:#FFD700;
+    --primary-200:#ddb900;
+    --primary-300:#917800;
+    --accent-100:#F5DEB3;
+    --accent-200:#907d56;
+    --text-100:#000000;
+    --text-200:#2c2c2c;
+    --bg-100:#FDF5E6;
+    --bg-200:#f3ebdc;
+    --bg-300:#cac2b4;
+      
+
+gold classy deluxe
+
+    --primary-100:#D4AF37;
+    --primary-200:#b49214;
+    --primary-300:#6c5400;
+    --accent-100:#8B6914;
+    --accent-200:#fffaa1;
+    --text-100:#333333;
+    --text-200:#5c5c5c;
+    --bg-100:#F7F5E6;
+    --bg-200:#edebdc;
+    --bg-300:#c4c2b4;
+      
+
+gold dark
+
+    --primary-100:#FFD700;
+    --primary-200:#ddb900;
+    --primary-300:#917800;
+    --accent-100:#c49216;
+    --accent-200:#5e3b00;
+    --text-100:#dcdcdc;
+    --text-200:#929292;
+    --bg-100:#1E1E1E;
+    --bg-200:#2d2d2d;
+    --bg-300:#454545;
+      
