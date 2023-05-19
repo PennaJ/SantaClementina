@@ -105,7 +105,7 @@ header .container nav a {
   text-decoration: none;
 }
 header.is-scrolling {
-  background-color: var(--Cream);
+  background-color: var(--Navy-blue);
 }
 header.is-scrolling .container {
   padding-top: 16px;
@@ -200,7 +200,7 @@ main {
   min-height: 100vh;
   display: block;
   z-index: 98;
-  background-color: var(--Cream);
+  background-color: var(--Navy-blue);
   padding-top: 120px;
   transition: 0.4s;
 }
