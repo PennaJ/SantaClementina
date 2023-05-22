@@ -34,6 +34,7 @@ Azul sta clementina: #002c51
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 100;
   box-sizing: border-box;
+  color: white;
 }
 
 strong {
@@ -65,17 +66,17 @@ img {
 
 /* HEADER */
 header {
+  height: 72px;
   position: fixed;
   color: var(--Navy-blue);
+  background-color: var(--Navy-blue);
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
-  padding-top: 5px;
 }
 header .container {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,16 +105,40 @@ header .container nav a {
   font-size: 20px;
   text-decoration: none;
 }
-header.is-scrolling {
+/* header.is-scrolling {
   background-color: var(--Navy-blue);
 }
 header.is-scrolling .container {
   padding-top: 16px;
   padding-bottom: 16px;
-}
+} */
+
+/* MAIN */
 
 main {
-  padding-top: 68px;
+  padding-top: 72px;
+}
+
+.main-banner{
+  height: 400px;
+  padding-top: 0px;
+}
+
+.carousel-inner{
+  height: 400px;
+}
+.carousel-controls{
+  top: 200px;
+}
+.carousel-indicators{
+  top: 350px;
+}
+.carousel-caption{
+  top: 230px;
+}
+.carousel-item img{
+  height: 400px;
+  opacity: 0.6;
 }
 
 .index-banner {
@@ -216,13 +241,13 @@ main {
   margin: 0 auto 16px;
   text-align: center;
   padding: 12px 16px;
-  background-color: var(--Honey);
+  background-color: lightblue;
   color: white;
   text-decoration: none;
 }
 
 .mobile-nav a:hover {
-  background-color: #e6ac48;
+  background-color: lightskyblue;
 }
 
 @media (min-width: 768px) {
@@ -267,10 +292,32 @@ main {
 
 .description-banner {
   text-align: center;
-  height: 400px;
-  background-color: #EAEAEA;
+  height: 400px; 
 }
-
+#foto-fabrica{
+  background-image: url("/img/fabrica-cerveza.jpg");
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  opacity: 0.6;
+}
+#donde-nos-encontramos{
+  position: relative;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+#donde-nos-encontramos p{
+  margin: 2px 0px;
+}
+#donde-nos-encontramos h2{
+  margin-bottom: 10px;
+}
+#map{
+  position: relative;
+  margin: auto;
+  height: 180px;
+  width: 80%;
+}
 .description-banner h2 {
   margin-top: 0px;
   padding-top: 30px;
@@ -483,5 +530,8 @@ footer .li-title {
   .main-navbar {
     display: none;
     width: 0%;
+  }
+  #donde-encontrar-cerveza{
+    top: 210px;
   }
 }/*# sourceMappingURL=mainStyle.css.map */
