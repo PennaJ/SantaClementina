@@ -134,7 +134,7 @@ main {
   top: 350px;
 }
 .carousel-caption{
-  top: 230px;
+  bottom: 30px;
 }
 .carousel-item img{
   height: 400px;
@@ -311,6 +311,7 @@ main {
 }
 #donde-nos-encontramos h2{
   margin-bottom: 10px;
+  padding-top: 30px;
 }
 #map{
   position: relative;
@@ -318,9 +319,13 @@ main {
   height: 180px;
   width: 80%;
 }
+.label-position{
+  position: relative;
+  top: 35px;
+}
 .description-banner h2 {
   margin-top: 0px;
-  padding-top: 30px;
+  padding-top: 0px;
   margin-bottom: 35px;
 }
 
@@ -531,7 +536,12 @@ footer .li-title {
     display: none;
     width: 0%;
   }
-  #donde-encontrar-cerveza{
-    top: 210px;
-  }
 }/*# sourceMappingURL=mainStyle.css.map */
+@media (max-width: 400px){
+  #donde-nos-encontramos h2{
+    font-size: 28px;
+  }
+  .description-banner h2 {
+    padding-top: 15px;
+  }
+}

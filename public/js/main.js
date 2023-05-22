@@ -1,4 +1,7 @@
+
+
 window.onload = function () {
+
 	window.addEventListener('scroll', function (e) {
 		if (window.pageYOffset > 0) {
 			document.querySelector("header").classList.add('is-scrolling');
@@ -16,23 +19,26 @@ window.onload = function () {
 	});
 }
 
-	// Initialize and add the map
-	let map;
+// 	// Initialize and add the map
+// 	let map;
 
-	// Initialize and add the map
-function initMap() {
-	// The location of Uluru
-	const SantaClementina = { lat: -35.231594, lng: -63.5921452 };
-	// The map, centered at Uluru
-	const map = new google.maps.Map(document.getElementById("map"), {
-	  zoom: 19,
-	  center: SantaClementina,
-	});
-	// The marker, positioned at Uluru
-	// const marker = new google.maps.Marker({
-	//   position: SantaClementina,
-	//   map: map,
-	// });
-  }
+// 	// Initialize and add the map
+// function initMap() {
+// 	// The location of Uluru
+// 	const SantaClementina = { lat: -35.231594, lng: -63.5921452 };
+// 	// The map, centered at Uluru
+// 	const map = new google.maps.Map(document.getElementById("map"), {
+// 	  zoom: 10,
+// 	  center: SantaClementina,
+// 	});
+// 	// The marker, positioned at Uluru
+// 	const marker = new google.maps.Marker({
+// 	  position: SantaClementina,
+// 	  map: map,
+// 	  title: 'Santa Clementina',
+// 	  //icon: __dirname + '../img/santa-clementina-logo.svg'
+// 	  label: { color: '#002c51', fontWeight: 'bold', fontSize: '14px', text: 'Santa Clementina - Cervecería', className:'label-position' }
+// 	});
+//   }
   
-  window.initMap = initMap;
+//   window.initMap = initMap;
