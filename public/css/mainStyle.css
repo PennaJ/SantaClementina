@@ -160,7 +160,7 @@ main {
   left: 20%;
   width: 60%;
   text-align: center;
-  border: #222c3c 2px solid;
+  /* border: #222c3c 2px solid; */
 }
 
 .carrito {
@@ -301,15 +301,47 @@ main {
   width: 100%;
   opacity: 0.6;
 }
+#foto-la-fabrica{
+  background-image: url("/img/la-fabrica.jpg");
+  opacity: 0.6;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+}
+#visita-la-fabrica{
+  position: relative;
+  opacity: 1;
+}
+button{
+
+  border-radius: 20px;
+}
+#la-fabrica-boton{
+  position: relative;
+  opacity: 1;
+  margin: auto;
+  width: 35%;
+  text-align: center;
+}
+#la-fabrica-boton img{
+  width: 100%;
+}
+#la-fabrica-boton button{
+  height: 100%;
+  font-size: 32px;
+  background-color: var(--Navy-blue);
+  font-weight: bold;
+}
 #donde-nos-encontramos{
   position: relative;
   opacity: 1;
   margin-bottom: 25px;
 }
-#donde-nos-encontramos p{
+#donde-nos-encontramos p, #visita-la-labrica p #formulario-consulta p{
   margin: 2px 0px;
 }
-#donde-nos-encontramos h2{
+#donde-nos-encontramos h2, #visita-la-fabrica h2, #formulario-consulta h2{
   margin-bottom: 10px;
   padding-top: 30px;
 }
@@ -328,11 +360,16 @@ main {
   padding-top: 0px;
   margin-bottom: 35px;
 }
+.la-fabrica{
+  height: 400px;
 
+}
 .description-banner p {
   margin: 20px 0px;
 }
-
+.formulario-consulta {
+  height: 700px;
+}
 .description-banner-icons {
   display: flex;
   justify-content: space-around;

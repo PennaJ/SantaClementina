@@ -73,6 +73,8 @@
                         </iframe>
                     </div>
                 </div>
+        </section>
+                <!-- Mapa API Dinamico de google maps -->
                 <!-- <div id="map"></div>
                 <script
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-hoxjop8lAYXUiu1xh2kzQvhPKFV_KGc&callback=initMap&v=weekly"
@@ -92,8 +94,17 @@
                     <p>Garantia de reembolso</p>
                 </div>
             </div> -->
+        <section class="description-banner">
+            <div id="foto-la-fabrica"></div>
+            <div id="visita-la-fabrica">
+                <h2>Visitá "La Fábrica"</h2>
+                <p>Hacé click en el logo y enterate de lo que ofrecemos en nuestro restaurant-brewpub</p>
+            </div>
+            <div id="la-fabrica-boton">
+                <a href="#"><img src="/img/la-fabrica-logo.svg" alt="logo la fabrica"></a>
+            </div>
         </section>
-        <section class="categories-section">
+        <!-- <section class="categories-section">
             <article id="relojes">
                 <h3>Relojes</h3>
             </article>
@@ -112,16 +123,34 @@
             <article id="corbatas">
                 <h3>Corbatas</h3>
             </article>
-        </section>
-        <section class="VIP-list">
-            <h2 id="unite-al-VIP">Unite a la lista VIP</h2>
-            <p>y enterate antes que nadie de nuestros nuevos lanzamientos.</p>
-            <p>Además accedes a articulos exclusivos por encargue y a promociones.</p>
+        </section> -->
+        <section class="description-banner formulario-consulta">
+            <div id="formulario-consulta">
+            <h2>Queres contactarnos?</h2>
+            <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
                 <form action="/">
-                    <input type="email" placeholder="Dejanos tu email">
+                    <label for="email">Escribi tu correo electronico a continuacion</label>
+                    <br>
+                    <input id="email" type="email" placeholder="Dejanos tu email">
+                    <br>
+                    <br>
+                    <label for="motivo">Cual es el motivo de tu consulta?</label>
+                    <br>
+                    <select name="motivo-consulta" id="motivo">
+                        <option value="venta-mayorista">Venta mayorista</option>
+                        <option value="venta-minorista">Venta minorista</option>
+                        <option value="otro">Otra</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="detalle-consulta">Comentanos que te gustaria saber</label>
+                    <br>
+                    <textarea name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
+                    <br>
                     <input type="submit" value="Enviar">
                 </form>
             </h2>
+        </div>
         </section>
     </main>
 
