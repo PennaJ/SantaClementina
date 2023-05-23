@@ -302,7 +302,6 @@ main {
   opacity: 0.6;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
 }
 #foto-la-fabrica{
   background-image: url("/img/la-fabrica.jpg");
@@ -312,7 +311,6 @@ main {
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
 }
 #visita-la-fabrica{
   position: relative;
@@ -623,5 +621,11 @@ footer .li-title {
   .main-navbar{
     width: 100%;
     margin: 0px;
+  }
+  #foto-fabrica{
+    background-size: 100%;
+  }
+  #foto-la-fabrica{
+    background-size: 100%;
   }
 }
