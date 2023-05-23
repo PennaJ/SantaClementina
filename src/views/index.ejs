@@ -137,6 +137,7 @@
                     <label for="motivo">Cual es el motivo de tu consulta?</label>
                     <br>
                     <select name="motivo-consulta" id="motivo">
+                        <option value="" selected disabled>Elegi</option>
                         <option value="venta-mayorista">Venta mayorista</option>
                         <option value="venta-minorista">Venta minorista</option>
                         <option value="otro">Otra</option>
@@ -145,7 +146,7 @@
                     <br>
                     <label for="detalle-consulta">Comentanos que te gustaria saber</label>
                     <br>
-                    <textarea name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
+                    <textarea maxlength="400" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
                     <br>
                     <input type="submit" value="Enviar">
                 </form>

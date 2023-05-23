@@ -75,32 +75,32 @@ header {
   width: 100%;
   z-index: 99;
 }
-header .container {
+header .header-container {
   height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .container h2 {
+header .header-container h2 {
   color: inherit;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
 }
-header .container h2 span {
+header .header-container h2 span {
   font-weight: 600;
 }
-header .container nav {
+header .header-container nav {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(4, auto);
 }
 @media (max-width: 767px) {
-  header .container nav {
+  header .header-container nav {
     display: none;
   }
 }
-header .container nav a {
+header .header-container nav a {
   color: inherit;
   font-size: 20px;
   text-decoration: none;
@@ -108,7 +108,7 @@ header .container nav a {
 /* header.is-scrolling {
   background-color: var(--Navy-blue);
 }
-header.is-scrolling .container {
+header.is-scrolling .header-container {
   padding-top: 16px;
   padding-bottom: 16px;
 } */
@@ -300,6 +300,9 @@ main {
   height: 400px;
   width: 100%;
   opacity: 0.6;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 #foto-la-fabrica{
   background-image: url("/img/la-fabrica.jpg");
@@ -308,6 +311,8 @@ main {
   width: 100%;
   position: absolute;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 #visita-la-fabrica{
   position: relative;
@@ -323,6 +328,7 @@ button{
   margin: auto;
   width: 35%;
   text-align: center;
+  max-width: 185px;
 }
 #la-fabrica-boton img{
   width: 100%;
@@ -350,6 +356,7 @@ button{
   margin: auto;
   height: 180px;
   width: 80%;
+  max-width: 780px;
 }
 .label-position{
   position: relative;
@@ -374,6 +381,10 @@ button{
   display: flex;
   justify-content: space-around;
   padding-top: 15px;
+}
+
+form input, select, textarea, option{
+  color: black;
 }
 
 .description-banner-icons div {
@@ -573,6 +584,9 @@ footer .li-title {
     display: none;
     width: 0%;
   }
+  #mi-carrito-texto{
+    display: none;
+  }
 }/*# sourceMappingURL=mainStyle.css.map */
 @media (max-width: 400px){
   #donde-nos-encontramos h2{
@@ -580,5 +594,34 @@ footer .li-title {
   }
   .description-banner h2 {
     padding-top: 15px;
+  }
+}
+@media (min-width: 480px){
+  form textarea{
+    width: 70%;
+  }
+}
+@media (min-width: 768px){
+  .main-navbar{
+    display: flex;
+    justify-content: space-around;
+    padding:0px;
+    align-items: center;
+  }
+  ul{
+    list-style-type: none;
+  }
+  .navbar {
+    width: 30vw;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+  }
+  .main-navbar{
+    width: 100%;
+    margin: 0px;
   }
 }
