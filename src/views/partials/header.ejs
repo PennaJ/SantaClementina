@@ -44,3 +44,26 @@
     <a href="#">Projects</a>
     <a href="#">Contact</a>
 </nav>
+<% if(ageCheck != 1){ %>
+<div class="overlay" id="ageOverlay">
+    <div class="overlay-content">
+        <img src="/img/santa-clementina-logo.svg" alt="logo" id="age-check-logo">
+        <h1>Sos mayor de edad?</h1>
+        <br>
+        <br>
+        <div id="agecheck-buttons">
+            <button class="button" onclick="postData('','/esMayor'), esMayor()">Si</button>
+            <button class="button" onclick="esMenor()" id="agecheck-no">No</button>
+        </div>
+    </div>
+</div>
+<% } %>
+
+<script>
+    function esMayor(){
+        document.getElementById('ageOverlay').style.display = 'none'; // Hide the overlay
+    }
+    function esMenor(){
+        alert("Debes ser mayor de edad para acceder al sitio");
+    }
+</script>

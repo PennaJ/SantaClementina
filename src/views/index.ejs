@@ -128,7 +128,12 @@
             <div id="formulario-consulta">
             <h2>Queres contactarnos?</h2>
             <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
-                <form action="/">
+            <!-- Revisar API del hosting para enviar mails   -->
+            <form action="/">
+                    <label for="name">Dejanos tu nombre</label>
+                    <br>
+                    <input type="text" name="name" id="name" placeholder="Tu nombre aca">
+                    <br>
                     <label for="email">Escribi tu correo electronico a continuacion</label>
                     <br>
                     <input id="email" type="email" placeholder="Dejanos tu email">
@@ -146,7 +151,7 @@
                     <br>
                     <label for="detalle-consulta">Comentanos que te gustaria saber</label>
                     <br>
-                    <textarea maxlength="400" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
+                    <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
                     <br>
                     <input type="submit" value="Enviar">
                 </form>

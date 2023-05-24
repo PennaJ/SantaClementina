@@ -1,11 +1,36 @@
 const express = require('express');
-const app = express();
 const path = require('path')
+const session = require('express-session');
 
+const app = express();
+
+//Use session
+app.use(session({
+    secret: 'PennaJ Rules', 
+    cookie: { maxAge: 86400000 },
+    resave: false,
+    saveUninitialized: false
+}))
+
+//Middleware global
+//AgeCheck
+
+function ageCheckMiddleware(req,res,next){
+    console.log(req.session.ageCheck)
+    req.ageCheck = req.session.ageCheck;
+    next()
+}
+
+app.use(ageCheckMiddleware);
+
+//Set Public path
 const publicPath = path.join(__dirname, '../public');
 
+//Set EJS as view engine
 app.set('view engine', 'ejs');
 const mainRouter = require('../routes/mainRouter.js');
+
+
 
 const PORT = 3000;
 
@@ -18,3 +43,4 @@ app.use(express.static(publicPath));
 app.set("views",path.join(__dirname,"./views"))
 
 app.use('/', mainRouter);
+

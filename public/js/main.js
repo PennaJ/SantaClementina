@@ -1,5 +1,3 @@
-
-
 window.onload = function () {
 
 	window.addEventListener('scroll', function (e) {
@@ -18,6 +16,30 @@ window.onload = function () {
 		mobile_menu.classList.toggle('is-active');
 	});
 }
+
+function postData(data,route){
+	fetch(route, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Handle successful response
+            console.log("POST request successful");
+        } else {
+            // Handle error response
+            console.log("POST request failed");
+        }
+    })
+    .catch(error => {
+        // Handle network error
+        console.log("Network error occurred");
+    });
+}
+
 
 // 	// Initialize and add the map
 // 	let map;
