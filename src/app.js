@@ -17,7 +17,7 @@ app.use(session({
 
 function ageCheckMiddleware(req,res,next){
     console.log(req.session.ageCheck)
-    req.ageCheck = req.session.ageCheck;
+    res.locals.ageCheck = req.session.ageCheck;
     next()
 }
 

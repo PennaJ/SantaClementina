@@ -2,9 +2,7 @@
 
 mainController = {
     index: (req,res)=>{
-        let ageCheck = req.ageCheck
-        console.log(ageCheck)
-        res.render('index',{ageCheck});
+        res.render('index');
     },
     detalleProducto: (req,res)=>{
         res.render('detalle-producto');
