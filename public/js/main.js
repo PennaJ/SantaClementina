@@ -15,7 +15,22 @@ window.onload = function () {
 		menu_btn.classList.toggle('is-active');
 		mobile_menu.classList.toggle('is-active');
 	});
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('form-contacto');
+        const scrollToElement = document.getElementById('motivo');
+      
+        form.addEventListener('submit', (event) => {
+          const errorsExist = locals.errors;
+      
+          if (errorsExist) {
+            event.preventDefault();
+            scrollToElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          })
+        });
 }
+  
 
 function postData(data,route){
 	fetch(route, {

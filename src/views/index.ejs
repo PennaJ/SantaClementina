@@ -129,31 +129,53 @@
             <h2>Queres contactarnos?</h2>
             <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
             <!-- Revisar API del hosting para enviar mails   -->
-            <form action="/">
+            <form action="/" method="post" id="form-contacto">
                     <label for="name">Dejanos tu nombre</label>
                     <br>
-                    <input type="text" name="name" id="name" placeholder="Tu nombre aca">
+                    <input type="text" name="name" id="name" placeholder="Tu nombre aca" value="<%= locals.old && old.name.value ? old.name : '' %>">
                     <br>
+                    <% if(locals.errors && errors.name){ %>
+                    <span class="form-error"><%= errors.name.msg %></span>
+                    <br>
+                    <% } else { %>
+                    <br>
+                    <% } %>
                     <label for="email">Escribi tu correo electronico a continuacion</label>
                     <br>
-                    <input id="email" type="email" placeholder="Dejanos tu email">
+                    <input id="email" type="email" placeholder="Dejanos tu email"  value="<%= locals.old && old.email? old.email : '' %>">
                     <br>
-                    <br>
+                    <% if(locals.errors && errors.email){ %>
+                        <span class="form-error"><%= errors.email.msg %></span>
+                        <br>
+                        <% } else { %>
+                        <br>
+                        <% } %>
                     <label for="motivo">Cual es el motivo de tu consulta?</label>
                     <br>
-                    <select name="motivo-consulta" id="motivo">
+                    <select name="motivoConsulta" id="motivo" value="<%= locals.old && old.motivo-consulta? old.motivo-consulta : '' %>">
                         <option value="" selected disabled>Elegi</option>
                         <option value="venta-mayorista">Venta mayorista</option>
                         <option value="venta-minorista">Venta minorista</option>
                         <option value="otro">Otra</option>
                     </select>
                     <br>
+                    <% if(locals.errors && errors.motivoConsulta){ %>
+                        <span class="form-error"><%= errors.motivoConsulta.msg %></span>
+                        <br>
+                        <% } else { %>
+                        <br>
+                        <% } %>
+                    <label for="detalleConsulta">Comentanos que te gustaria saber</label>
                     <br>
-                    <label for="detalle-consulta">Comentanos que te gustaria saber</label>
+                    <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"><%= locals.old && old.detalle-consulta? old.detalle-consulta : '' %></textarea>
                     <br>
-                    <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"></textarea>
-                    <br>
-                    <input type="submit" value="Enviar">
+                    <% if(locals.errors && errors.detalleConsulta){ %>
+                        <span class="form-error"><%= errors.detalleConsulta.msg %></span>
+                        <br>
+                        <% } else { %>
+                        <br>
+                        <% } %>
+                    <button class="button" type="submit">Enviar</button>
                 </form>
             </h2>
         </div>

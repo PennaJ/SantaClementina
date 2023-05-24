@@ -113,6 +113,7 @@ img {
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
+  margin: 5px 0px;
 }
 
 .button:focus:not(:focus-visible):not(.focus-visible) {
@@ -143,6 +144,11 @@ img {
 #agecheck-buttons{
   display: flex;
   justify-content: space-around;
+}
+
+.form-error{
+  font-weight: bold;
+  color: red;
 }
 /* #agecheck-no{
   background-color: red;
@@ -243,7 +249,7 @@ main {
 
 .brand-logo {
   position: absolute;
-  left: 20%;
+  left: 24.8%;
   width: 50%;
   text-align: center;
   /* border: #222c3c 2px solid; */
@@ -459,7 +465,7 @@ button{
   margin: 20px 0px;
 }
 .formulario-consulta {
-  height: 700px;
+  height: 780px;
 }
 .description-banner-icons {
   display: flex;
