@@ -1,15 +1,17 @@
 window.onload = function(){
-    const form = document.querySelector('form-contacto');
+    const form = document.getElementById('form-contacto');
 
     form.addEventListener('submit', function(e){
-        e.preventDefault();
 
-        let campoNombre = document.querySelector('form #name')
+        alert("El formulario se envió satisfactoriamente")
+        // e.preventDefault();
 
-        let errores = [];
+        // let campoNombre = document.querySelector('form #name')
 
-        if (campoNombre == ''){
-            errores.push('El campo nombre debe ser completado')
-        }
+        // let errores = [];
+
+        // if (campoNombre == ''){
+        //     errores.push('El campo nombre debe ser completado')
+        // }
     })
 }
