@@ -15,22 +15,34 @@ window.onload = function () {
 		menu_btn.classList.toggle('is-active');
 		mobile_menu.classList.toggle('is-active');
 	});
+    };
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('form-contacto');
-        const scrollToElement = document.getElementById('motivo');
+    // window.addEventListener('DOMContentLoaded', () => {
+    //     const form = document.getElementById('form-contacto');
+    //     const scrollToElement = document.getElementById('motivo');
       
-        form.addEventListener('submit', (event) => {
-          const errorsExist = locals.errors;
+    //     form.addEventListener('submit', (event) => {
+    //       const errorsExist = locals.errors;
       
-          if (errorsExist) {
-            event.preventDefault();
-            scrollToElement.scrollIntoView({ behavior: 'smooth' });
-            }
-          })
-        });
-}
+    //       if (errorsExist) {
+    //         event.preventDefault();
+    //         scrollToElement.scrollIntoView({ behavior: 'smooth' });
+    //         }
+    //       })
+         
+//Si hay errores en el formulario hace un scroll hasta el mismo
+
+function scrollToElementID (elementID){
+
+        const element = document.getElementById(elementID);
+
+        console.log('scrolleando')
+
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+           
   
+//Envia los datos del formulario por post
 
 function postData(data,route){
 	fetch(route, {

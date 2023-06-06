@@ -13,9 +13,10 @@ mainController = {
     },
     formContacto(req,res) {
         let errors = validationResult(req);
+        console.log(req.body)
 
         if(errors.isEmpty()){
-            console.log('todo ok para enviar el mail')
+            res.render('index')
         } else {
             res.render('index',{errors: errors.mapped(), old: req.body})
         }

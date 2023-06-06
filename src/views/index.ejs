@@ -129,10 +129,22 @@
             <h2>Queres contactarnos?</h2>
             <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
             <!-- Revisar API del hosting para enviar mails   -->
-            <form action="/" method="post" id="form-contacto">
+
+            <% if (locals.errors) { %>
+                <script>
+                  window.onload = function() {
+                    const element = document.getElementById('form-contacto');
+                    console.log('scrolleando');
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  };
+                </script>
+              <% } %>
+
+            <form action="/" method="POST" id="form-contacto">
+                              
                     <label for="name">Dejanos tu nombre</label>
                     <br>
-                    <input type="text" name="name" id="name" placeholder="Tu nombre aca" value="<%= locals.old && old.name.value ? old.name : '' %>">
+                    <input type="text" name="name" id="name" placeholder="Tu nombre aca" value="<%= locals.old && old.name ? old.name : '' %>" required>
                     <br>
                     <% if(locals.errors && errors.name){ %>
                     <span class="form-error"><%= errors.name.msg %></span>
@@ -142,7 +154,7 @@
                     <% } %>
                     <label for="email">Escribi tu correo electronico a continuacion</label>
                     <br>
-                    <input id="email" type="email" placeholder="Dejanos tu email"  value="<%= locals.old && old.email? old.email : '' %>">
+                    <input name="email" id="email" type="email" placeholder="Dejanos tu email"  value="<%= locals.old && old.email? old.email : '' %>" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     <br>
                     <% if(locals.errors && errors.email){ %>
                         <span class="form-error"><%= errors.email.msg %></span>
@@ -152,11 +164,11 @@
                         <% } %>
                     <label for="motivo">Cual es el motivo de tu consulta?</label>
                     <br>
-                    <select name="motivoConsulta" id="motivo" value="<%= locals.old && old.motivo-consulta? old.motivo-consulta : '' %>">
-                        <option value="" selected disabled>Elegi</option>
-                        <option value="venta-mayorista">Venta mayorista</option>
-                        <option value="venta-minorista">Venta minorista</option>
-                        <option value="otro">Otra</option>
+                    <select name="motivoConsulta" id="motivo" required>
+                        <option value="" <%= locals.old && old.motivoConsulta ? '' : 'selected' %>  disabled>Elegi</option>
+                        <option value="venta-mayorista" <%= locals.old && old.motivoConsulta == 'venta-mayorista' ? 'selected' : '' %>>Venta mayorista</option>
+                        <option value="venta-minorista" <%= locals.old && old.motivoConsulta == 'venta-minorista' ? 'selected' : '' %>>Venta minorista</option>
+                        <option value="otro" <%= locals.old && old.motivoConsulta == 'otro' ? 'selected' : '' %>>Otra</option>
                     </select>
                     <br>
                     <% if(locals.errors && errors.motivoConsulta){ %>
@@ -167,7 +179,7 @@
                         <% } %>
                     <label for="detalleConsulta">Comentanos que te gustaria saber</label>
                     <br>
-                    <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalle-consulta" id="detalle-consulta" cols="30" rows="10"><%= locals.old && old.detalle-consulta? old.detalle-consulta : '' %></textarea>
+                    <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalleConsulta" id="detalleConsulta" cols="30" rows="10" required><%= locals.old && old.detalleConsulta? old.detalleConsulta : '' %></textarea>
                     <br>
                     <% if(locals.errors && errors.detalleConsulta){ %>
                         <span class="form-error"><%= errors.detalleConsulta.msg %></span>

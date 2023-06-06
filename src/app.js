@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path')
 const session = require('express-session');
+const bodyParser = require('body-parser');
+
 
 const app = express();
 
@@ -21,6 +23,9 @@ function ageCheckMiddleware(req,res,next){
 }
 
 app.use(ageCheckMiddleware);
+
+//Body Parser
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Set Public path
 const publicPath = path.join(__dirname, '../public');
