@@ -16,8 +16,12 @@ window.onload = function () {
 		mobile_menu.classList.toggle('is-active');
 	});
 
-    const element = document.getElementById('form-contacto');
-    element.scrollIntoView({ behavior: 'smooth' });
+    const botonContacto = document.getElementById('link-contacto');
+    const form = document.getElementById('form-contacto')
+
+    botonContacto.addEventListener('click', function () {
+        form.scrollIntoView({ behavior: 'smooth'})
+    });
 
     };
 
