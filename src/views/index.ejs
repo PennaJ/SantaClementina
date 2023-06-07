@@ -130,16 +130,6 @@
             <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
             <!-- Revisar API del hosting para enviar mails   -->
 
-            <% if (locals.errors) { %>
-                <script>
-                  window.onload = function() {
-                    const element = document.getElementById('form-contacto');
-                    console.log('scrolleando');
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  };
-                </script>
-              <% } %>
-
             <form action="/" method="POST" id="form-contacto">
                               
                     <label for="name">Dejanos tu nombre</label>
@@ -197,8 +187,6 @@
     <%- include('./partials/footer.ejs') %>
 
     </div>
-
-    <script type="text/javascript" src="/js/frontFormValidations.js"></script>
 
 </body>
 </html>

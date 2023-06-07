@@ -15,3 +15,16 @@ window.onload = function(){
         // }
     })
 }
+
+
+// window.onload = function () {
+//     // first code here...
+// };
+
+// var prev_handler = window.onload;
+// window.onload = function () {
+//     if (prev_handler) {
+//         prev_handler();
+//     }
+//     // second code here...
+// };

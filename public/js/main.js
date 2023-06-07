@@ -8,29 +8,18 @@ window.onload = function () {
 		}
 	});
 
-	const menu_btn = document.querySelector('.hamburger');
+	const menu_btn = document.querySelector('button.hamburger');
 	const mobile_menu = document.querySelector('.mobile-nav');
 
 	menu_btn.addEventListener('click', function () {
 		menu_btn.classList.toggle('is-active');
 		mobile_menu.classList.toggle('is-active');
 	});
-    };
 
-    // window.addEventListener('DOMContentLoaded', () => {
-    //     const form = document.getElementById('form-contacto');
-    //     const scrollToElement = document.getElementById('motivo');
-      
-    //     form.addEventListener('submit', (event) => {
-    //       const errorsExist = locals.errors;
-      
-    //       if (errorsExist) {
-    //         event.preventDefault();
-    //         scrollToElement.scrollIntoView({ behavior: 'smooth' });
-    //         }
-    //       })
-         
-//Si hay errores en el formulario hace un scroll hasta el mismo
+    const element = document.getElementById('form-contacto');
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    };
 
 function scrollToElementID (elementID){
 
