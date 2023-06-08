@@ -285,6 +285,7 @@ main {
 
 .hamburger {
   margin: auto;
+  margin-top: 12px;
   position: relative;
   display: block;
   width: 35px;
@@ -396,13 +397,14 @@ main {
   height: 400px; 
 }
 #foto-fabrica{
-  background-image: url("/img/fabrica-cerveza.jpg");
+  background-image: url("/img/fermentadores.jpg");
   position: absolute;
   height: 400px;
   width: 100%;
   opacity: 0.6;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 #foto-la-fabrica{
   background-image: url("/img/la-fabrica.jpg");
@@ -412,6 +414,7 @@ main {
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 #visita-la-fabrica{
   position: relative;
@@ -721,11 +724,6 @@ footer .li-title {
   .main-navbar{
     width: 100%;
     margin: 0px;
-  }
-  #foto-fabrica{
-    background-size: 100%;
-  }
-  #foto-la-fabrica{
-    background-size: 100%;
-  }
+
+}
 }
