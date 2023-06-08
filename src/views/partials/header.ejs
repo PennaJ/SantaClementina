@@ -6,14 +6,14 @@
             </button>
             <navbar class="navbar">
                     <ul class="main-navbar">
-                        <li><a href='#'>Home</a></li>
+                        <li><a href='/'>Home</a></li>
                         <!-- <li><a href="#">Productos</a></li> -->
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="/nosotros">Nosotros</a></li>
                     </ul>
             </navbar>
         </div>
         <div class="brand-logo">
-            <a href="#"><img src="/img/santa-clementina-logo.svg" alt="logo" id="sta-clementina-logo"></a>
+            <a><img src="/img/santa-clementina-logo.svg" alt="logo" id="sta-clementina-logo"></a>
         </div>
         <navbar class="navbar">
                 <ul class="main-navbar">
@@ -39,10 +39,9 @@
     </div>
 </header>
 <nav class="mobile-nav">
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+    <a href="/">Home</a>
+    <a href="/nosotros">Nosotros</a>
+    <a id="link-contacto-mobile">Contacto</a>
 </nav>
 <% if(locals.ageCheck != 1){ %>
 <div class="overlay" id="ageOverlay">

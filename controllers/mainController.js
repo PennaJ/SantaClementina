@@ -20,6 +20,9 @@ mainController = {
         } else {
             res.render('index',{errors: errors.mapped(), old: req.body})
         }
+    },
+    nosotros: (req,res) => {
+        res.render('aboutUs')
     }
 }
 

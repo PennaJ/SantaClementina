@@ -18,12 +18,48 @@ window.onload = function () {
 
     const botonContacto = document.getElementById('link-contacto');
     const form = document.getElementById('form-contacto')
+    const body = document.querySelector('body')
+    
+    //Condicional que ejecuta un codigo en un url y otro en otro
+    if (body.classList.contains('index')) {
+        botonContacto.addEventListener('click', function () {
+            form.scrollIntoView({ behavior: 'smooth'})
+        });
+        } else {
+        botonContacto.addEventListener('click', function () {
+            location.href = '/#form-contacto'
+                }
+        )}
 
-    botonContacto.addEventListener('click', function () {
-        form.scrollIntoView({ behavior: 'smooth'})
-    });
+    const staClementinaLogoBoton = document.getElementById('sta-clementina-logo')
 
-    };
+    if (body.classList.contains('index')) {
+        staClementinaLogoBoton.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+        });
+        } else {
+        staClementinaLogoBoton.addEventListener('click', function () {
+            location.href = '/'
+                }
+        )}
+
+    const botonContactoMobile = document.getElementById('link-contacto-mobile')
+    
+    if (body.classList.contains('index')) {
+        botonContactoMobile.addEventListener('click', function () {
+            menu_btn.classList.toggle('is-active');
+		    mobile_menu.classList.toggle('is-active');
+            form.scrollIntoView({ behavior: 'smooth'})
+        });
+        } else {
+        botonContactoMobile.addEventListener('click', function () {
+            location.href = '/#form-contacto'
+                }
+        )}
+}
+    
+
+    
 
 function scrollToElementID (elementID){
 

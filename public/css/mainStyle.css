@@ -35,6 +35,7 @@ Azul sta clementina: #002c51
   font-weight: 100;
   box-sizing: border-box;
   color: white;
+  scroll-behavior: smooth
 }
 
 strong {
@@ -57,11 +58,19 @@ img {
   object-fit: cover;
 }
 
+#link-contacto {
+  cursor: pointer;
+}
+#link-contacto-mobile {
+  cursor: pointer;
+}
+
 #sta-clementina-logo{
   position: relative;
   width: 130px;
   top: 0px;
   left: 0px;
+  cursor: pointer;
 }
 /* Overlay AgeCheck */
 .overlay {
