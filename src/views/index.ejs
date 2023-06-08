@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include('./partials/head.ejs') %>
-<title>Santa Clementina - Fabrica de cerveza artesanal - Microbrewery</title>
+<title>Santa Clementina - Fábrica de cerveza artesanal - Microbrewery</title>
 <meta name="description" content="Santa Clementina microcervecería | Fábrica de cerveza artesanal en Intendente Alvear, La Pampa. Venta al por menor y al por mayor de cerveza. Proveedor de cerveza en barril y en lata para bares">
 </head>
 
@@ -29,8 +29,8 @@
                   <div class="carousel-item">
                     <img class="d-block w-100" src="/img/latas.jpg" alt="Second slide">
                     <div class="carousel-caption d-md-block">
-                        <h5>DE LA FABRICA A TU MESA</h5>
-                        <p>Vendemos latas al mayoreo, y llegan de nuesta fábrica, directo a tu mesa</p>
+                        <h5>DE LA FÁBRICA A TU MESA</h5>
+                        <p>Vendemos latas al por mayor, podes buscarlas en varios puntos de venta</p>
                       </div>
                   </div>
                   <div class="carousel-item">
@@ -56,9 +56,9 @@
                     
                 </div>
                 <div id="donde-nos-encontramos">
-                    <h2>Donde nos encontramos?</h2>
+                    <h2>Dónde nos encontramos?</h2>
                     <p>Estamos en Gral Roca 356, Intendente Alvear, La Pampa</p>
-                    <p>Veni a visitarnos, y probá nuestra cerveza en el brewpub "La Fábrica" que tenemos al frente</p>
+                    <p>Vení a visitarnos, y probá nuestra cerveza en el brewpub "La Fábrica" que tenemos al frente</p>
                     <br>
                     <div id="map">
                         <iframe
@@ -126,7 +126,7 @@
         </section> -->
         <section class="description-banner formulario-consulta">
             <div id="formulario-consulta">
-            <h2>Queres contactarnos?</h2>
+            <h2>Querés contactarnos?</h2>
             <p>Dejanos tu mail y el motivo de tu consulta! Vamos a responderte en la brevedad</p>
             <!-- Revisar API del hosting para enviar mails   -->
 
@@ -142,7 +142,7 @@
                     <% } else { %>
                     <br>
                     <% } %>
-                    <label for="email">Escribi tu correo electronico a continuacion</label>
+                    <label for="email">Escribí tu correo electrónico a continuación</label>
                     <br>
                     <input name="email" id="email" type="email" placeholder="Dejanos tu email"  value="<%= locals.old && old.email? old.email : '' %>" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     <br>
@@ -152,7 +152,7 @@
                         <% } else { %>
                         <br>
                         <% } %>
-                    <label for="motivo">Cual es el motivo de tu consulta?</label>
+                    <label for="motivo">Cuál es el motivo de tu consulta?</label>
                     <br>
                     <select name="motivoConsulta" id="motivo" required>
                         <option value="" <%= locals.old && old.motivoConsulta ? '' : 'selected' %>  disabled>Elegi</option>
@@ -167,7 +167,7 @@
                         <% } else { %>
                         <br>
                         <% } %>
-                    <label for="detalleConsulta">Comentanos que te gustaria saber</label>
+                    <label for="detalleConsulta">Comentanos que te gustaría saber</label>
                     <br>
                     <textarea maxlength="600" placeholder="Escribinos tu consulta" name="detalleConsulta" id="detalleConsulta" cols="30" rows="10" required><%= locals.old && old.detalleConsulta? old.detalleConsulta : '' %></textarea>
                     <br>
